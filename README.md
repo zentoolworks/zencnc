@@ -2,6 +2,8 @@
 
 Zen CNC - Simple and Powerful Grbl Based CNC Control Application (Windows only for now)
 
+#Our [Wiki Pages](https://github.com/zentoolworks/zencnc/wiki) is working in progress.  
+
 Instructions:
 
   * Go to Website: https://github.com/zentoolworks/zencnc
