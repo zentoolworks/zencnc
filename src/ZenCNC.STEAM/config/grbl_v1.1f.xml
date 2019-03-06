@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<grbl>
+  <Parameters>
+    <Parameter id="0" desc="Step pulse time, microseconds" type="int"></Parameter>
+    <Parameter id="1" desc="Step idle delay, milliseconds" type="int"></Parameter>
+    <Parameter id="2" desc="Step pulse invert, mask" type="mask" display="true"></Parameter>
+    <Parameter id="3" desc="Step direction invert, mask" type="mask" display="true"></Parameter>
+    <Parameter id="4" desc="Invert step enable pin, boolean" type="bool" display="true"></Parameter>
+    <Parameter id="5" desc="Invert limit pins, boolean" type="bool" display="true"></Parameter>
+    <Parameter id="6" desc="Invert probe pin, boolean" type="bool" display="true"></Parameter>
+    <Parameter id="10" desc="Status report options, mask" type="mask"></Parameter>
+    <Parameter id="11" desc="Junction deviation, millimeters" type="float"></Parameter>
+    <Parameter id="12" desc="Arc tolerance, millimeters" type="float"></Parameter>
+    <Parameter id="13" desc="Report in inches, boolean" type="bool"></Parameter>
+    <Parameter id="20" desc="Soft limits enable, boolean" type="bool" display="true"></Parameter>
+    <Parameter id="21" desc="Hard limits enable, boolean" type="bool" display="true"></Parameter>
+    <Parameter id="22" desc="Homing cycle enable, boolean" type="bool" display="true"></Parameter>
+    <Parameter id="23" desc="Homing direction invert, mask" type="mask" display="true"></Parameter>
+    <Parameter id="24" desc="Homing locate feed rate, mm/min" type="float" display="true"></Parameter>
+    <Parameter id="25" desc="Homing search seek rate, mm/min" type="float" display="true"></Parameter>
+    <Parameter id="26" desc="Homing switch debounce delay, milliseconds" type="int" display="true"></Parameter>
+    <Parameter id="27" desc="Homing switch pull-off distance, millimeters" type="float" display="true"></Parameter>
+    <Parameter id="30" desc="Maximum spindle speed, RPM" type="int"></Parameter>
+    <Parameter id="31" desc="Minimum spindle speed, RPM" type="int"></Parameter>
+    <Parameter id="32" desc="Laser-mode enable, boolean" type="bool" display="true"></Parameter>
+    <Parameter id="100" desc="X-axis steps per millimeter, steps/mm" type="float" display="true"></Parameter>
+    <Parameter id="101" desc="Y-axis steps per millimeter, steps/mm" type="float" display="true"></Parameter>
+    <Parameter id="102" desc="Z-axis steps per millimeter, steps/mm" type="float" display="true"></Parameter>
+    <Parameter id="110" desc="X-axis maximum rate, mm/min" type="float" display="true"></Parameter>
+    <Parameter id="111" desc="Y-axis maximum rate, mm/min" type="float" display="true"></Parameter>
+    <Parameter id="112" desc="Z-axis maximum rate, mm/min" type="float" display="true"></Parameter>
+    <Parameter id="120" desc="X-axis acceleration, mm/sec^2" type="float" display="true"></Parameter>
+    <Parameter id="121" desc="Y-axis acceleration, mm/sec^" type="float" display="true"></Parameter>
+    <Parameter id="122" desc="Z-axis acceleration, mm/sec^2" type="float" display="true"></Parameter>
+    <Parameter id="130" desc="X-axis maximum travel, millimeters" type="float" display="true"></Parameter>
+    <Parameter id="131" desc="Y-axis maximum travel, millimeters" type="float" display="true"></Parameter>
+    <Parameter id="132" desc="Z-axis maximum travel, millimeters" type="float" display="true" isTheLast="true"></Parameter>
+  </Parameters>
+  <Errors>
+    <Error code="1">G-code words consist of a letter and a value. Letter was not found.</Error>
+    <Error code="2">Numeric value format is not valid or missing an expected value.</Error>
+    <Error code="3">Grbl '$' system command was not recognized or supported.</Error>
+    <Error code="4">Negative value received for an expected positive value.</Error>
+    <Error code="5">Homing cycle is not enabled via settings.</Error>
+    <Error code="6">Minimum step pulse time must be greater than 3usec</Error>
+    <Error code="7">EEPROM read failed. Reset and restored to default values.</Error>
+    <Error code="8">Grbl '$' command cannot be used unless Grbl is IDLE. Ensures smooth operation during a job.</Error>
+    <Error code="9">G-code locked out during alarm or jog state</Error>
+    <Error code="10">Soft limits cannot be enabled without homing also enabled.</Error>
+    <Error code="11">Max characters per line exceeded. Line was not processed and executed.</Error>
+    <Error code="12">(Compile Option) Grbl '$' setting value exceeds the maximum step rate supported.</Error>
+    <Error code="13">Safety door detected as opened and door state initiated.</Error>
+    <Error code="14">(Grbl-Mega Only) Build info or startup line exceeded EEPROM line length limit.</Error>
+    <Error code="15">Jog target exceeds machine travel. Command ignored.</Error>
+    <Error code="16">Jog command with no '=' or contains prohibited g-code.</Error>
+    <Error code="20">Unsupported or invalid g-code command found in block.</Error>
+    <Error code="21">More than one g-code command from same modal group found in block.</Error>
+    <Error code="22">Feed rate has not yet been set or is undefined.</Error>
+    <Error code="23">G-code command in block requires an integer value.</Error>
+    <Error code="24">	Two G-code commands that both require the use of the XYZ axis words were detected in the block.</Error>
+    <Error code="25">A G-code word was repeated in the block.</Error>
+    <Error code="26">A G-code command implicitly or explicitly requires XYZ axis words in the block, but none were detected.</Error>
+    <Error code="27">N line number value is not within the valid range of 1 - 9,999,999.</Error>
+    <Error code="28">A G-code command was sent, but is missing some required P or L value words in the line.</Error>
+    <Error code="29">Grbl supports six work coordinate systems G54-G59. G59.1, G59.2, and G59.3 are not supported.</Error>
+    <Error code="30">The G53 G-code command requires either a G0 seek or G1 feed motion mode to be active. A different motion was active.</Error>
+    <Error code="31">There are unused axis words in the block and G80 motion mode cancel is active.</Error>
+    <Error code="32">A G2 or G3 arc was commanded but there are no XYZ axis words in the selected plane to trace the arc.</Error>
+    <Error code="33">The motion command has an invalid target. G2, G3, and G38.2 generates this error, if the arc is impossible to generate or if the probe target is the current position.</Error>
+    <Error code="34">A G2 or G3 arc, traced with the radius definition, had a mathematical error when computing the arc geometry. Try either breaking up the arc into semi-circles or quadrants, or redefine them with the arc offset definition.</Error>
+    <Error code="35">	A G2 or G3 arc, traced with the offset definition, is missing the IJK offset word in the selected plane to trace the arc.</Error>
+    <Error code="36">There are unused, leftover G-code words that aren't used by any command in the block.</Error>
+    <Error code="37">The G43.1 dynamic tool length offset command cannot apply an offset to an axis other than its configured axis. The Grbl default axis is the Z-axis.</Error>
+  </Errors>
+  <Alarms>
+    <Alarm code="1">Hard limit triggered. Machine position is likely lost due to sudden and immediate halt. Re-homing is highly recommended.</Alarm>
+    <Alarm code="2">G-code motion target exceeds machine travel. Machine position safely retained. Alarm may be unlocked.</Alarm>
+    <Alarm code="3">Reset while in motion. Grbl cannot guarantee position. Lost steps are likely. Re-homing is highly recommended.</Alarm>
+    <Alarm code="4">Probe fail. The probe is not in the expected initial state before starting probe cycle, where G38.2 and G38.3 is not triggered and G38.4 and G38.5 is triggered.</Alarm>
+    <Alarm code="5">Probe fail. Probe did not contact the workpiece within the programmed travel for G38.2 and G38.4.</Alarm>
+    <Alarm code="6">Homing fail. Reset during active homing cycle.</Alarm>
+    <Alarm code="7">Homing fail. Safety door was opened during active homing cycle.</Alarm>
+    <Alarm code="8">Homing fail. Cycle failed to clear limit switch when pulling off. Try increasing pull-off setting or check wiring.</Alarm>
+    <Alarm code="9">Homing fail. Could not find limit switch within search distance. Defined as 1.5 * max_travel on search and 5 * pulloff on locate phases.</Alarm>
+  </Alarms>
+  <PushMsgs>
+    <PushMsg name="Welcome message" regex="Grbl"/>
+    <PushMsg name="Alarm message" regex="ALARM:"/>
+    <PushMsg name="$ settings" regex="$"/>
+    <PushMsg name="Feedback" regex="[]"/>
+    <PushMsg name="Startup line execution" regex=">"/>
+    <PushMsg name="Real-time status reports" regex=""/>
+  </PushMsgs>
+  <MSGs>
+    <MSG>Reset to continue</MSG>
+    <MSG>‘$H’|’$X’ to unlock</MSG>
+    <MSG>Caution: Unlocked</MSG>
+    <MSG>Enabled</MSG>
+    <MSG>Disabled</MSG>
+    <MSG>Check Door</MSG>
+    <MSG>Check Limits</MSG>
+    <MSG>Pgm End</MSG>
+    <MSG>Restoring defaults</MSG>
+    <MSG>Sleeping</MSG>
+  </MSGs>
+  <OPTs regex="[OPT:]">
+    <OPT code="V">Variable spindle enabled</OPT>
+    <OPT code="N">Line numbers enabled</OPT>
+    <OPT code="M">Mist coolant enabled</OPT>
+    <OPT code="C">CoreXY enabled</OPT>
+    <OPT code="P">Parking motion enabled</OPT>
+    <OPT code="Z">Homing force origin enabled</OPT>
+    <OPT code="H">Homing single axis enabled</OPT>
+    <OPT code="T">Two limit switches on axis enabled</OPT>
+    <OPT code="A">Allow feed rate overrides in probe cycles</OPT>
+    <OPT code="*">Restore all EEPROM disabled</OPT>
+    <OPT code="$">Restore EEPROM $ settings disabled</OPT>
+    <OPT code="#">Restore EEPROM parameter data disabled</OPT>
+    <OPT code="I">Build info write user string disabled</OPT>
+    <OPT code="E">Force sync upon EEPROM write disabled</OPT>
+    <OPT code="W">Force sync upon work coordinate offset change disabled</OPT>
+    <OPT code="L">Homing init lock sets Grbl into an alarm state upon power up</OPT>
+  </OPTs>
+  <CMDs>
+    <CMD letter="M" nums="0,2,30" desc="Program Pause and End" version=""></CMD>
+    <CMD letter="M" nums="3,4,5" desc="Spindle Control" version=""></CMD>
+    <CMD letter="M" nums="8,9" desc="Coolant Control" version=""></CMD>
+    <CMD letter="G" nums="0,1,00,01" desc="Linear Motions" version=""></CMD>
+    <CMD letter="G" nums="2,3,02,03" desc="Arc and Helical Motions" version=""></CMD>
+    <CMD letter="G" nums="4,04" desc="Dwell" version=""></CMD>
+    <CMD letter="G" nums="10 L2,10 L20" desc="Set Work Coordinate Offsets" version=""></CMD>
+    <CMD letter="G" nums="17,18,19" desc="Plane Selections" version=""></CMD>
+    <CMD letter="G" nums="20,21" desc="Units" version=""></CMD>
+    <CMD letter="G" nums="28,30" desc="Go to Pre-Defined Position" version=""></CMD>
+    <CMD letter="G" nums="28.1,30.1" desc="Set Pre-Defined Position" version=""></CMD>
+    <CMD letter="G" nums="53" desc="Move in Absolute Coordinates" version=""></CMD>
+    <CMD letter="G" nums="54,55,56,57,58,59" desc="Work Coordinate Systems" version=""></CMD>
+    <CMD letter="G" nums="80" desc="Motion Mode Cancel" version=""></CMD>
+    <CMD letter="G" nums="90,91" desc="Distance Modes" version=""></CMD>
+    <CMD letter="G" nums="92" desc="Coordinate Offset" version=""></CMD>
+    <CMD letter="G" nums="92.1" desc="Clear Coordinate System Offsets" version=""></CMD>
+    <CMD letter="G" nums="93,94" desc="Feedrate Modes" version=""></CMD>
+    <CMD letter="G" nums="38.2" desc="Probing" version="0.9h"></CMD>
+    <CMD letter="G" nums="43.1,49" desc="Dynamic Tool Length Offsets" version="0.9h"></CMD>
+    <CMD letter="G" nums="93,94" desc="Feedrate Modes" version=""></CMD>
+    <CMD letter="G" nums="93,94" desc="Feedrate Modes" version=""></CMD>
+    <CMD letter="G" nums="38.3,38.4,38.5" desc="Probing" version="0.9i"></CMD>
+    <CMD letter="G" nums="40" desc="Cutter Radius Compensation Modes" version="0.9i"></CMD>
+    <CMD letter="G" nums="91.1" desc="Arc IJK Distance Modes" version=""></CMD>
+  </CMDs>
+</grbl>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>ZenCNC.STEAM.WinForm.Control</id>
+        <version>0.1.5</version>
+        <title>CNC Grbl .NET Windows Form Control Library</title>
+        <authors>Zen Toolworks, Inc.</authors>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <description>.NET Arduino CNC Grbl Library for school STEAM classroom and hobbiest CNC UI developers</description>
+        <releaseNotes>Initial Release</releaseNotes>
+        <copyright>Copyright 2019 (c) Zen Toolworks, Inc. All rights reserved.</copyright>
+		    <license type="expression">MIT</license>
+      <dependencies>
+        <dependency id="ZenCNC.STEAM" version="0.1.5" />
+        <dependency id="ArduinoUploader" version="3.2.0" />
+      </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Debug\ZenCNC.STEAM.WinForm.Control.dll" target="lib\net45\ZenCNC.STEAM.WinForm.Control.dll" />
+    </files>
+</package>

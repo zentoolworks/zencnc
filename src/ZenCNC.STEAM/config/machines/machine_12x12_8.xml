@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Machine id="4" name="Zen Toolworks|12x12|F8" model="12x12 F8">
+  <Parameters>
+    <Parameter id="100" desc="X-axis steps per millimeter" type="float" value="200"></Parameter>
+    <Parameter id="101" desc="Y-axis steps per millimeter" type="float" value="200"></Parameter>
+    <Parameter id="102" desc="Z-axis steps per millimeter" type="float" value="200"></Parameter>
+    <Parameter id="110" desc="X-axis maximum rate, mm/min" type="float" value="1000"></Parameter>
+    <Parameter id="111" desc="Y-axis maximum rate, mm/min" type="float" value="1000"></Parameter>
+    <Parameter id="112" desc="Z-axis maximum rate, mm/min" type="float" value="1000"></Parameter>
+    <Parameter id="120" desc="X-axis acceleration, mm/sec^2" type="float" value="80"></Parameter>
+    <Parameter id="121" desc="Y-axis acceleration, mm/sec^2" type="float" value="80"></Parameter>
+    <Parameter id="122" desc="Z-axis acceleration, mm/sec^2" type="float" value="80"></Parameter>
+    <Parameter id="130" desc="X-axis maximum travel, millimeters" type="float" value="300"></Parameter>
+    <Parameter id="131" desc="Y-axis maximum travel, millimeters" type="float" value="300"></Parameter>
+    <Parameter id="132" desc="Z-axis maximum travel, millimeters" type="float" value="100"></Parameter>
+  </Parameters>
+</Machine>

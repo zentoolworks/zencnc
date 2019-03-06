@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9D5416AC-95C4-466F-B783-641A8E8CFB2C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ZenCNC.STEAM.WinForm.Control</RootNamespace>
+    <AssemblyName>ZenCNC.STEAM.WinForm.Control</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ArduinoUploader, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ArduinoUploader.3.2.0\lib\net452\ArduinoUploader.dll</HintPath>
+    </Reference>
+    <Reference Include="IntelHexFormatReader, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IntelHexFormatReader.2.2.1\lib\net452\IntelHexFormatReader.dll</HintPath>
+    </Reference>
+    <Reference Include="RJCP.SerialPortStream, Version=2.1.2.0, Culture=neutral, PublicKeyToken=5f5e7b70c6a74deb, processorArchitecture=MSIL">
+      <HintPath>..\packages\SerialPortStream.2.1.2\lib\net45\RJCP.SerialPortStream.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommandButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommandButton.Designer.cs">
+      <DependentUpon>CommandButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommandEventArgs.cs" />
+    <Compile Include="DROSample.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DROSample.Designer.cs">
+      <DependentUpon>DROSample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditableField.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EditableField.Designer.cs">
+      <DependentUpon>EditableField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ParamForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Examples\ParamForm.Designer.cs">
+      <DependentUpon>ParamForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\SampleApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Examples\SampleApp.Designer.cs">
+      <DependentUpon>SampleApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\SaveAsMachineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Examples\SaveAsMachineForm.Designer.cs">
+      <DependentUpon>SaveAsMachineForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCodeFileControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCodeFileControl.Designer.cs">
+      <DependentUpon>GCodeFileControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HexUploadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HexUploadForm.Designer.cs">
+      <DependentUpon>HexUploadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoggingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JoggingControl.Designer.cs">
+      <DependentUpon>JoggingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MachineLoadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MachineLoadForm.Designer.cs">
+      <DependentUpon>MachineLoadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParameterEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ParameterEditor.Designer.cs">
+      <DependentUpon>ParameterEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParameterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParameterForm.Designer.cs">
+      <DependentUpon>ParameterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CommandButton.resx">
+      <DependentUpon>CommandButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DROSample.resx">
+      <DependentUpon>DROSample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditableField.resx">
+      <DependentUpon>EditableField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examples\ParamForm.resx">
+      <DependentUpon>ParamForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examples\SampleApp.resx">
+      <DependentUpon>SampleApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examples\SaveAsMachineForm.resx">
+      <DependentUpon>SaveAsMachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCodeFileControl.resx">
+      <DependentUpon>GCodeFileControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HexUploadForm.resx">
+      <DependentUpon>HexUploadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoggingControl.resx">
+      <DependentUpon>JoggingControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MachineLoadForm.resx">
+      <DependentUpon>MachineLoadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParameterEditor.resx">
+      <DependentUpon>ParameterEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParameterForm.resx">
+      <DependentUpon>ParameterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="ZenCNC.STEAM.WinForm.Control.nuspec" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="nuget.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZenCNC.STEAM\ZenCNC.STEAM.csproj">
+      <Project>{6dfddbb5-99e8-4ed4-bdb2-68ff858c6d46}</Project>
+      <Name>ZenCNC.STEAM</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
