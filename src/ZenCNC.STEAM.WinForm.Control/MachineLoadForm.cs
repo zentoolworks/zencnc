@@ -19,15 +19,20 @@ namespace ZenCNC.STEAM.WinForm.Control
 
         public bool Ok { get; set; }
 
+        private GrblClient grbl = null;
         
-        public MachineLoadForm(string folder)
+        public MachineLoadForm(GrblClient grbl)
         {
             InitializeComponent();
 
-            MachineConfigFolder = folder;
+            this.grbl = grbl;
 
+            List<string> machineNames = grbl.GetAllMachineNames();
 
-            LoadMachineList();
+            foreach(var machineName in machineNames)
+            {
+                this.cmb_machines.Items.Add(machineName);
+            }
         }
 
         public void LoadMachineList()
@@ -81,7 +86,9 @@ namespace ZenCNC.STEAM.WinForm.Control
             if(this.cmb_machines.SelectedItem != null)
             {
                 string name = this.cmb_machines.SelectedItem.ToString();
-                XmlNode machineNode = GetMachineByName(name);
+
+                XmlDocument machineXml = grbl.LoadMachineByName(name);
+                XmlNode machineNode = machineXml.SelectSingleNode("/Machine");
                 if(machineNode != null)
                 {
                     XmlNodeList paramList = machineNode.SelectNodes("Parameters/Parameter");

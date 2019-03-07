@@ -132,7 +132,37 @@ namespace ZenCNC.STEAM.grbl
         {
             //Open grbl configuration file
             XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load("config\\grbl_v1.1f.xml");
+
+            string grblVersion = "1.1f";
+            string[] resources = this.GetType().Assembly.GetManifestResourceNames();
+            string resource = string.Empty;
+            foreach(var res in resources)
+            {
+                if(res.ToUpper().IndexOf(grblVersion.ToUpper()) >= 0)
+                {
+                    resource = res;
+                    break;
+                }
+            }
+            if(resource.Length > 0)
+            {
+                string grblXmlStr = string.Empty;
+                using (Stream stream = this.GetType().Assembly.
+                    GetManifestResourceStream(resource))
+                {
+                    using (StreamReader sr = new StreamReader(stream))
+                    {
+                        grblXmlStr = sr.ReadToEnd();
+                        xmlDoc.LoadXml(grblXmlStr);
+                    }
+                }
+            }
+            else
+            {
+                throw new Exception("No GRBL Definition File Found");
+            }
+
+            //xmlDoc.Load("config\\grbl_v1.1f.xml");
             //For each parameter defined in config file
 
             errorHash = new Hashtable();
@@ -156,6 +186,7 @@ namespace ZenCNC.STEAM.grbl
                 alarmHash.Add(code, desc);
             }
         }
+
 
 
         public void SaveMachineAs(string machinename, string machineid, string machinemodel)
@@ -190,6 +221,70 @@ namespace ZenCNC.STEAM.grbl
             xml.Save(file);
         }
         string machinesConfig = "config\\machines.xml";
+
+        public List<string> GetAllMachineNames()
+        {
+            List<string> machineNames = new List<string>();
+
+            string[] resources = this.GetType().Assembly.GetManifestResourceNames();
+            string resource = string.Empty;
+            foreach (var res in resources)
+            {
+                if (res.IndexOf("machine_") >= 0)
+                {
+                    XmlDocument machineXml = LoadMachineByResourceName(res);
+                    string name = machineXml.SelectSingleNode("/Machine").Attributes["name"].Value;
+                    machineNames.Add(name);
+                }
+            }
+
+            return machineNames;
+        }
+        
+        public string GetResourceByMachineName(string machinename)
+        {
+            string resource = string.Empty;
+            string[] resources = this.GetType().Assembly.GetManifestResourceNames();
+            foreach (var res in resources)
+            {
+                if (res.IndexOf("machine_") >= 0)
+                {
+                    XmlDocument machineXml = LoadMachineByResourceName(res);
+                    string name = machineXml.SelectSingleNode("/Machine").Attributes["name"].Value;
+                    if(name.Equals(machinename))
+                    {
+                        resource = res;
+                        break;
+                    }
+                }
+            }
+            return resource;
+        }
+        public XmlDocument LoadMachineByName(string name)
+        {
+            string resource = GetResourceByMachineName(name);
+            if(resource.Length > 0)
+            {
+                return LoadMachineByResourceName(resource);
+            }
+            return null;
+        }
+        public XmlDocument LoadMachineByResourceName(string resource)
+        {
+            XmlDocument machineXml = new XmlDocument();
+            string xmlStr = string.Empty;
+            using (Stream stream = this.GetType().Assembly.
+                GetManifestResourceStream(resource))
+            {
+                using (StreamReader sr = new StreamReader(stream))
+                {
+                    xmlStr = sr.ReadToEnd();
+                    machineXml.LoadXml(xmlStr);
+                }
+            }
+            return machineXml;
+        }
+
         public List<string> GetAllMachines()
         {
             List<string> machines = new List<string>();

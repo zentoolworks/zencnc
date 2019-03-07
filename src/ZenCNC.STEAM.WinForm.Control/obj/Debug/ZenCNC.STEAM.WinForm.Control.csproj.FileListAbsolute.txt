@@ -32,3 +32,36 @@ C:\Users\xin\Documents\Visual Studio 2017\Projects\ZenCNC.STEAM\src\ZenCNC.STEAM
 C:\Users\xin\Documents\Visual Studio 2017\Projects\ZenCNC.STEAM\src\ZenCNC.STEAM.WinForm.Control\bin\Debug\config\machines\machine_vision_8.xml
 C:\Users\xin\Documents\Visual Studio 2017\Projects\ZenCNC.STEAM\src\ZenCNC.STEAM.WinForm.Control\obj\Debug\ZenCNC.STEAM.WinForm.Control.MachineLoadForm.resources
 C:\Users\xin\Documents\Visual Studio 2017\Projects\ZenCNC.STEAM\src\ZenCNC.STEAM.WinForm.Control\obj\Debug\ZenCNC.STEAM.WinForm.Control.Examples.SaveAsMachineForm.resources
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\bin\Debug\config\grbl_v1.1f.xml
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\bin\Debug\config\machines\machine_12x12_8.xml
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\bin\Debug\config\machines\machine_7x12_8.xml
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\bin\Debug\config\machines\machine_7x7_1.25.xml
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\bin\Debug\config\machines\machine_7x7_8.xml
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\bin\Debug\config\machines\machine_vision_8.xml
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\bin\Debug\ZenCNC.STEAM.WinForm.Control.dll
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\bin\Debug\ZenCNC.STEAM.WinForm.Control.pdb
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\bin\Debug\ArduinoUploader.dll
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\bin\Debug\IntelHexFormatReader.dll
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\bin\Debug\RJCP.SerialPortStream.dll
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\bin\Debug\ZenCNC.STEAM.dll
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\bin\Debug\ZenCNC.STEAM.pdb
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\bin\Debug\ZenCNC.STEAM.xml
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\bin\Debug\RJCP.SerialPortStream.pdb
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\bin\Debug\RJCP.SerialPortStream.xml
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\obj\Debug\ZenCNC.STEAM.WinForm.Control.csprojResolveAssemblyReference.cache
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\obj\Debug\ZenCNC.STEAM.WinForm.Control.CommandButton.resources
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\obj\Debug\ZenCNC.STEAM.WinForm.Control.DROSample.resources
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\obj\Debug\ZenCNC.STEAM.WinForm.Control.EditableField.resources
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\obj\Debug\ZenCNC.STEAM.WinForm.Examples.ParamForm.resources
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\obj\Debug\ZenCNC.STEAM.WinForm.Examples.SampleAppForm.resources
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\obj\Debug\ZenCNC.STEAM.WinForm.Control.Examples.SaveAsMachineForm.resources
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\obj\Debug\ZenCNC.STEAM.WinForm.Control.GCodeFileControl.resources
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\obj\Debug\ZenCNC.STEAM.WinForm.Control.HexUploadForm.resources
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\obj\Debug\ZenCNC.STEAM.WinForm.Control.JoggingControl.resources
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\obj\Debug\ZenCNC.STEAM.WinForm.Control.MachineLoadForm.resources
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\obj\Debug\ZenCNC.STEAM.WinForm.Control.ParameterEditor.resources
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\obj\Debug\ZenCNC.STEAM.WinForm.Control.ParameterForm.resources
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\obj\Debug\ZenCNC.STEAM.WinForm.Control.UserControl1.resources
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\obj\Debug\ZenCNC.STEAM.WinForm.Control.csproj.GenerateResource.Cache
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\obj\Debug\ZenCNC.STEAM.WinForm.Control.dll
+C:\Users\xin\Documents\GitHub\zencnc\src\ZenCNC.STEAM.WinForm.Control\obj\Debug\ZenCNC.STEAM.WinForm.Control.pdb

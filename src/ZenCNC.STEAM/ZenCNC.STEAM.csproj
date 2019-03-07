@@ -62,28 +62,24 @@
     <Compile Include="StringUtil.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="config\grbl_v1.1f.xml">
+    <EmbeddedResource Include="config\grbl_v1.1f.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="config\machines\machines.xml">
+    </EmbeddedResource>
+    <EmbeddedResource Include="config\machines\machine_12x12_8.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="config\machines\machine_12x12_8.xml">
+    </EmbeddedResource>
+    <EmbeddedResource Include="config\machines\machine_7x12_8.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="config\machines\machine_7x12_8.xml">
+    </EmbeddedResource>
+    <EmbeddedResource Include="config\machines\machine_7x7_1.25.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="config\machines\machine_7x7_1.25.xml">
+    </EmbeddedResource>
+    <EmbeddedResource Include="config\machines\machine_7x7_8.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="config\machines\machine_7x7_8.xml">
+    </EmbeddedResource>
+    <EmbeddedResource Include="config\machines\machine_vision_8.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="config\machines\machine_vision_8.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    </EmbeddedResource>
     <Content Include="nuget.exe" />
   </ItemGroup>
   <ItemGroup>

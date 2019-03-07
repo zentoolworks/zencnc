@@ -331,7 +331,7 @@ namespace ZenCNC.STEAM.WinForm.Examples
 
         private void machinesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MachineLoadForm mform = new MachineLoadForm("config\\machines");
+            MachineLoadForm mform = new MachineLoadForm(grbl);
             mform.ShowDialog();
             if(mform.Ok)
             {

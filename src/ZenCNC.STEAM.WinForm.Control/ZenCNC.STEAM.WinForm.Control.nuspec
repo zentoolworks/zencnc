@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>ZenCNC.STEAM.WinForm.Control</id>
-        <version>0.1.5</version>
+        <version>0.1.7</version>
         <title>CNC Grbl .NET Windows Form Control Library</title>
         <authors>Zen Toolworks, Inc.</authors>
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
@@ -11,7 +11,7 @@
         <copyright>Copyright 2019 (c) Zen Toolworks, Inc. All rights reserved.</copyright>
 		    <license type="expression">MIT</license>
       <dependencies>
-        <dependency id="ZenCNC.STEAM" version="0.1.5" />
+        <dependency id="ZenCNC.STEAM" version="0.1.6" />
         <dependency id="ArduinoUploader" version="3.2.0" />
       </dependencies>
     </metadata>
